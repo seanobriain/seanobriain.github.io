@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seán Labhrás Ua Briain — Irish Genealogy &amp; Lineage Research</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Configuration: Georgian Dublin & Library Gold Palette -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        oxford: {
+                            950: '#070D1F',
+                            900: '#0B132B',
+                            850: '#0F1836',
+                        },
+                        library: {
+                            800: '#131B33',
+                            750: '#18213D',
+                            700: '#1C2541',
+                            600: '#273356',
+                        },
+                        goldleaf: {
+                            600: '#B59124',
+                            500: '#D4AF37',
+                            400: '#E5C158',
+                            300: '#F0D47E',
+                        },
+                        ivory: {
+                            100: '#FAF8F3',
+                            200: '#F4F1EA',
+                            300: '#DFD9CC',
+                            400: '#B8C0D4',
+                            500: '#8894B0',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0B132B;
+            color: #F4F1EA;
+        }
+
+        /* Architectural Georgian Dublin & Library Gold Hero Backdrop */
+        .georgian-hero-bg {
+            background:
+                radial-gradient(ellipse 75% 55% at 76% 20%, rgba(212, 175, 55, 0.12), transparent 65%),
+                radial-gradient(ellipse 65% 50% at 15% 85%, rgba(28, 37, 65, 0.65), transparent 60%),
+                #0B132B;
+        }
+
+        /* Double-Line Genealogical Certificate Border Motif */
+        .certificate-card {
+            position: relative;
+            background: linear-gradient(180deg, rgba(28, 37, 65, 0.94) 0%, rgba(19, 27, 51, 0.98) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.34);
+            box-shadow: 0 22px 48px -18px rgba(4, 8, 20, 0.85);
+        }
+        .certificate-card::before {
+            content: '';
+            position: absolute;
+            inset: 7px;
+            border: 1px solid rgba(212, 175, 55, 0.16);
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+        /* Corner Flourish Ticks for Formal Charters */
+        .charter-corner {
+            position: relative;
+        }
+        .charter-corner::after {
+            content: '✦';
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-size: 10px;
+            color: rgba(212, 175, 55, 0.45);
+            pointer-events: none;
+        }
+
+        /* Burnished Gold Leaf High-Contrast CTA */
+        .gold-cta {
+            background: linear-gradient(135deg, #E5C158 0%, #D4AF37 55%, #B89225 100%);
+            color: #0B132B;
+            box-shadow: 0 10px 26px -6px rgba(212, 175, 55, 0.36);
+        }
+        .gold-cta:hover {
+            background: linear-gradient(135deg, #F0D47E 0%, #E5C158 55%, #D4AF37 100%);
+            box-shadow: 0 14px 32px -6px rgba(229, 193, 88, 0.5);
+        }
+
+        /* Georgian Gold Hairline Rule with Center Diamond */
+        .georgian-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .georgian-divider::before,
+        .georgian-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.32), transparent);
+        }
+
+        /* Custom Navy & Gold Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B132B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #273356;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-goldleaf-500/30 selection:text-ivory-100">
+
+    <!-- =====================================================================
+         1. STICKY SCHOLARLY HEADER
+    ====================================================================== -->
+    <header class="sticky top-0 z-50 bg-oxford-900/92 backdrop-blur-md border-b border-goldleaf-500/25 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Crest & Wordmark (Original Celtic Triskelion & Archival Crest) -->
+                <a href="#top" class="flex items-center gap-3.5 group focus:outline-none">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-library-800 border border-goldleaf-500/45 flex items-center justify-center shadow-inner group-hover:border-goldleaf-400 transition-all shrink-0">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2.5L19.5 5.5V11.8C19.5 16.4 16.3 20.1 12 21.5C7.7 20.1 4.5 16.4 4.5 11.8V5.5L12 2.5Z" stroke="#F4F1EA" stroke-width="1.6" fill="rgba(212, 175, 55, 0.16)"/>
+                            <circle cx="12" cy="11.8" r="1.4" fill="#D4AF37"/>
+                            <path d="M12 11.8C12 9.6 13.7 8 15.2 9.1C16.5 10.1 15.7 12.1 14 11.8" stroke="#D4AF37" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M12 11.8C10.1 12.9 9.5 15.1 11.2 15.9C12.7 16.6 14.1 14.9 13 13.5" stroke="#D4AF37" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M12 11.8C10.1 10.7 8.4 11.8 8.7 13.6C9 15.2 11.1 15.4 11.6 13.7" stroke="#D4AF37" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-lg sm:text-xl tracking-tight text-ivory-200 leading-none">
+                            Seán Labhrás Ua Briain
+                        </span>
+                        <span class="font-mono text-[10px] sm:text-[11px] font-medium text-goldleaf-500 tracking-[0.18em] uppercase mt-1">
+                            IRISH GENEALOGY &amp; LINEAGE
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#approach" class="text-sm font-medium text-ivory-400 hover:text-goldleaf-400 transition-colors">Approach</a>
+                    <a href="#methodology" class="text-sm font-medium text-ivory-400 hover:text-goldleaf-400 transition-colors">Methodology</a>
+                    <a href="#services" class="text-sm font-medium text-ivory-400 hover:text-goldleaf-400 transition-colors">Services</a>
+                    <a href="#case-studies" class="text-sm font-medium text-ivory-400 hover:text-goldleaf-400 transition-colors">Case Studies</a>
+                </nav>
+
+                <!-- Right Actions: Burnished Gold Fiverr Booking CTA + Mobile Menu -->
+                <div class="flex items-center gap-3">
+                    <a href="https://www.fiverr.com/seanobriain" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold tracking-wider uppercase gold-cta transition-all">
+                        <span>Book on Fiverr</span>
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl text-ivory-200 hover:bg-library-700 focus:outline-none" aria-label="Toggle Menu">
+                        <svg id="menuIconOpen" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menuIconClose" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-oxford-850 border-b border-goldleaf-500/25 px-4 pt-3 pb-6 space-y-2">
+            <a href="#approach" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-base font-medium text-ivory-200 hover:bg-library-700">Approach</a>
+            <a href="#methodology" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-base font-medium text-ivory-200 hover:bg-library-700">Methodology</a>
+            <a href="#services" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-base font-medium text-ivory-200 hover:bg-library-700">Services</a>
+            <a href="#case-studies" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-base font-medium text-ivory-200 hover:bg-library-700">Case Studies</a>
+            <div class="pt-2">
+                <a href="https://www.fiverr.com/seanobriain" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()" class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl text-xs font-bold tracking-wider uppercase gold-cta">
+                    <span>Book on Fiverr</span>
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================================
+         2. GEORGIAN HERO SECTION & ARCHIVAL REPOSITORY & LINEAGE CHARTER
+    ====================================================================== -->
+    <section id="top" class="relative overflow-hidden georgian-hero-bg pt-14 pb-20 lg:pt-24 lg:pb-28 border-b border-goldleaf-500/20">
+        <!-- Subtle Architectural Georgian Fanlight & Arch Linework -->
+        <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-[0.13]" viewBox="0 0 1440 820" fill="none" preserveAspectRatio="xMidYMid slice">
+            <!-- Grand Georgian Semicircular Fanlight Motif on Right -->
+            <path d="M740 780V440C740 241.177 901.177 80 1100 80C1298.82 80 1460 241.177 1460 440V780" stroke="#D4AF37" stroke-width="1.2"/>
+            <path d="M785 780V440C785 266.03 926.03 125 1100 125C1273.97 125 1415 266.03 1415 440V780" stroke="#D4AF37" stroke-width="0.9"/>
+            <path d="M785 440H1415" stroke="#D4AF37" stroke-width="1"/>
+            <!-- Fanlight Radiating Spokes -->
+            <line x1="1100" y1="440" x2="1100" y2="125" stroke="#D4AF37" stroke-width="0.8"/>
+            <line x1="1100" y1="440" x2="942" y2="167" stroke="#D4AF37" stroke-width="0.8"/>
+            <line x1="1100" y1="440" x2="1258" y2="167" stroke="#D4AF37" stroke-width="0.8"/>
+            <line x1="1100" y1="440" x2="827" y2="282" stroke="#D4AF37" stroke-width="0.8"/>
+            <line x1="1100" y1="440" x2="1373" y2="282" stroke="#D4AF37" stroke-width="0.8"/>
+            <path d="M980 440C980 373.726 1033.73 320 1100 320C1166.27 320 1220 373.726 1220 440" stroke="#D4AF37" stroke-width="0.9"/>
+            <!-- Left Vertical Library Pilaster Rule -->
+            <line x1="90" y1="0" x2="90" y2="820" stroke="#D4AF37" stroke-width="0.7" stroke-dasharray="4 6"/>
+        </svg>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
+                
+                <!-- Left Editorial Copy Column -->
+                <div class="lg:col-span-6 space-y-7">
+                    <!-- Formal Archival Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-library-800/95 border border-goldleaf-500/35">
+                        <span class="w-2 h-2 rounded-full bg-goldleaf-500"></span>
+                        <span class="font-mono text-[11px] font-medium tracking-[0.16em] text-goldleaf-400 uppercase">
+                            DUBLIN &amp; ALL-IRELAND ARCHIVAL RESEARCH
+                        </span>
+                    </div>
+
+                    <!-- Stately Georgian Serif Headline -->
+                    <h1 class="font-serif font-bold text-4xl sm:text-5xl lg:text-[3.65rem] text-ivory-200 tracking-tight leading-[1.06]">
+                        Tracing Irish Lineages <span class="italic text-goldleaf-400">Beyond the Brick Wall</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-ivory-400 leading-relaxed max-w-2xl">
+                        With over a decade of specialist experience in Irish family history—and having reliably traced my own lineage back to the mid-17th century—I apply creative, lateral research across Dublin and county repositories to solve seemingly impossible ancestral dead ends.
+                    </p>
+
+                    <!-- Primary Burnished Gold Fiverr CTA + Secondary Methodology Link -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-1">
+                        <a href="https://www.fiverr.com/seanobriain" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl text-xs font-bold uppercase tracking-wider gold-cta hover:-translate-y-0.5 transition-all">
+                            <span>Book on Fiverr</span>
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                        <a href="#methodology" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold text-ivory-200 bg-library-700/70 border border-goldleaf-500/30 hover:border-goldleaf-400 hover:bg-library-700 transition-colors">
+                            <span>Explore Methodology</span>
+                        </a>
+                    </div>
+
+                    <!-- Scholarly Credentials Strip -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-goldleaf-500/20 max-w-lg">
+                        <div>
+                            <div class="font-serif font-bold text-2xl sm:text-3xl text-goldleaf-400">10+ Years</div>
+                            <div class="font-mono text-[11px] uppercase tracking-wider text-ivory-400 mt-0.5">Archival Practice</div>
+                        </div>
+                        <div class="border-x border-goldleaf-500/20 px-3">
+                            <div class="font-serif font-bold text-2xl sm:text-3xl text-ivory-200">c. 1650s</div>
+                            <div class="font-mono text-[11px] uppercase tracking-wider text-ivory-400 mt-0.5">Proven Own Line</div>
+                        </div>
+                        <div>
+                            <div class="font-serif font-bold text-2xl sm:text-3xl text-goldleaf-400">32 Counties</div>
+                            <div class="font-mono text-[11px] uppercase tracking-wider text-ivory-400 mt-0.5">All-Ireland Scope</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Interactive Widget: Archival Repository & Lineage Charter -->
+                <div class="lg:col-span-6">
+                    <div class="relative mx-auto max-w-xl">
+                        <!-- Subtle Gold Leaf Halo -->
+                        <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-goldleaf-500/15 via-library-700/30 to-goldleaf-400/15 blur-xl pointer-events-none"></div>
+                        
+                        <div class="relative certificate-card charter-corner rounded-2xl overflow-hidden">
+                            <!-- Charter Header Bar -->
+                            <div class="bg-oxford-950/90 px-6 py-4 border-b border-goldleaf-500/25 flex items-center justify-between">
+                                <div class="flex items-center gap-2.5">
+                                    <svg class="w-4 h-4 text-goldleaf-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                    <span class="font-mono text-xs font-semibold tracking-wider text-ivory-200 uppercase">
+                                        Archival Repository &amp; Lineage Charter
+                                    </span>
+                                </div>
+                                <span id="charterFolioTag" class="font-mono text-[11px] font-medium text-goldleaf-400 bg-goldleaf-500/10 border border-goldleaf-500/30 px-2.5 py-0.5 rounded">
+                                    TIER I / IV
+                                </span>
+                            </div>
+
+                            <!-- 4 Historical Tiers Selector -->
+                            <div class="p-6 sm:p-7 space-y-5">
+                                <div id="charterEraTabs" class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 bg-oxford-950/80 p-1.5 rounded-xl border border-goldleaf-500/25">
+                                    <!-- Populated via JS -->
+                                </div>
+
+                                <!-- Formal Genealogical Certificate Preview Container -->
+                                <div id="charterPreviewContent" class="space-y-4">
+                                    <!-- Populated via JS -->
+                                </div>
+
+                                <!-- Charter Footer Navigation -->
+                                <div class="pt-3 border-t border-goldleaf-500/20 flex items-center justify-between text-xs text-ivory-400">
+                                    <span class="font-mono text-[11px] text-ivory-500">
+                                        DUBLIN • NAI • NLI • REGISTRY OF DEEDS
+                                    </span>
+                                    <button onclick="nextCharterTier()" class="font-mono text-xs font-semibold text-goldleaf-400 hover:text-goldleaf-300 cursor-pointer">
+                                        Next Era →
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         3. FOLIO I — BIOGRAPHY & SCHOLARLY PHILOSOPHY
+    ====================================================================== -->
+    <section id="approach" class="py-20 lg:py-28 bg-oxford-850 border-b border-goldleaf-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Roman Numeral Folio Header -->
+            <div class="mb-12">
+                <div class="font-mono text-xs font-semibold tracking-[0.22em] text-goldleaf-500 uppercase mb-2">
+                    FOLIO I — PRACTITIONER &amp; PHILOSOPHY
+                </div>
+                <div class="georgian-divider">
+                    <span class="font-serif italic text-goldleaf-500 text-sm">❖</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                
+                <!-- Left Authentic Bio & Credentials -->
+                <div class="lg:col-span-7 space-y-6">
+                    <h2 class="font-serif font-bold text-3xl sm:text-4xl lg:text-[2.65rem] text-ivory-200 tracking-tight leading-tight">
+                        Creative, Lateral Research Grounded in the Nuances of Irish Life
+                    </h2>
+
+                    <!-- Full Authentic Fiverr Bio Quote -->
+                    <div class="border-l-2 border-goldleaf-500 pl-5 sm:pl-6 py-1 space-y-4">
+                        <p class="text-base sm:text-lg text-ivory-200 leading-relaxed">
+                            “I’m Seán Labhrás Ua Briain, an Irish genealogist with over a decade of experience specialising in Irish family history research. I have helped countless researchers overcome seemingly impossible Irish genealogy “brick walls” through creative, lateral research which has allowed me to reliably trace my own family lineage to the mid-17th century. Irish genealogy is about more than records—it requires an understanding of local history, naming traditions, geography and the nuances of Irish life that can make all the difference.”
+                        </p>
+                    </div>
+
+                    <!-- Three Credential Pillars -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3">
+                        <div class="p-4 rounded-xl bg-library-800/90 border border-goldleaf-500/25">
+                            <div class="font-mono text-[11px] text-goldleaf-400 uppercase tracking-wider">Credential 01</div>
+                            <div class="font-serif font-bold text-lg text-ivory-200 mt-1">10+ Years Specialist Experience</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-library-800/90 border border-goldleaf-500/25">
+                            <div class="font-mono text-[11px] text-goldleaf-400 uppercase tracking-wider">Credential 02</div>
+                            <div class="font-serif font-bold text-lg text-ivory-200 mt-1">Mid-17th Century Proven Lineage</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-library-800/90 border border-goldleaf-500/25">
+                            <div class="font-mono text-[11px] text-goldleaf-400 uppercase tracking-wider">Credential 03</div>
+                            <div class="font-serif font-bold text-lg text-ivory-200 mt-1">32-County Archival Coverage</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Framed Scholar's Note Card -->
+                <div class="lg:col-span-5">
+                    <div class="certificate-card charter-corner rounded-2xl p-8 sm:p-9 space-y-5">
+                        <div class="flex items-center justify-between border-b border-goldleaf-500/20 pb-3">
+                            <span class="font-mono text-xs uppercase tracking-[0.18em] text-goldleaf-400">
+                                Scholar’s Note • Dublin
+                            </span>
+                            <span class="font-mono text-[11px] text-ivory-500">MS. REF. 1650–1922</span>
+                        </div>
+
+                        <h3 class="font-serif font-bold text-2xl text-ivory-200 leading-snug">
+                            Why Standard Database Searches Stall in Ireland
+                        </h3>
+
+                        <p class="text-sm sm:text-base text-ivory-400 leading-relaxed">
+                            The 1922 Public Record Office fire at Dublin’s Four Courts destroyed most 19th-century census returns and pre-1858 wills—leading many researchers to assume their Irish trail ends abruptly.
+                        </p>
+
+                        <p class="text-sm sm:text-base text-ivory-400 leading-relaxed">
+                            Yet parallel manuscripts—Registry of Deeds memorials, estate rental rolls, Tithe Applotment books, and parish registers—survive in abundance when approached through lateral evidence and local context.
+                        </p>
+
+                        <div class="pt-3 border-t border-goldleaf-500/20 flex items-center gap-3.5">
+                            <div class="w-11 h-11 rounded-full bg-oxford-900 border border-goldleaf-500/50 flex items-center justify-center font-serif font-bold text-goldleaf-400 text-base">
+                                SLB
+                            </div>
+                            <div>
+                                <div class="font-serif font-bold text-base text-ivory-200">Seán Labhrás Ua Briain</div>
+                                <div class="font-mono text-[11px] text-goldleaf-400 uppercase tracking-wider">Irish Genealogist &amp; Archival Researcher</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         4. FOLIO II — FOUR CORE METHODOLOGY PILLARS
+    ====================================================================== -->
+    <section id="methodology" class="py-20 lg:py-28 bg-oxford-900 border-b border-goldleaf-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Roman Numeral Folio Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="font-mono text-xs font-semibold tracking-[0.22em] text-goldleaf-500 uppercase">
+                    FOLIO II — ARCHIVAL METHODOLOGY
+                </div>
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl lg:text-[2.85rem] text-ivory-200 tracking-tight">
+                    Four Pillars of Lateral Irish Genealogy
+                </h2>
+                <p class="text-base sm:text-lg text-ivory-400">
+                    Every investigation combines manuscript rigour with cultural, linguistic, and geographic literacy specific to Ireland.
+                </p>
+            </div>
+
+            <!-- 4 Double-Bordered Scholarly Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Pillar 1 -->
+                <div class="certificate-card charter-corner rounded-2xl p-7 hover:border-goldleaf-400/70 transition-all flex flex-col justify-between space-y-5">
+                    <div class="space-y-4">
+                        <div class="font-mono text-xs text-goldleaf-400 tracking-widest">PILLAR I</div>
+                        <div class="w-12 h-12 rounded-xl bg-oxford-900 border border-goldleaf-500/40 text-goldleaf-400 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-ivory-200">Creative &amp; Lateral Research</h3>
+                        <p class="text-sm text-ivory-400 leading-relaxed">
+                            Reconstructing collateral kinship networks, baptismal sponsors, estate leases, and court books to bridge missing direct vital records.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-goldleaf-500/15 font-mono text-[11px] text-goldleaf-400/90">
+                        INDIRECT &amp; COLLATERAL EVIDENCE
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="certificate-card charter-corner rounded-2xl p-7 hover:border-goldleaf-400/70 transition-all flex flex-col justify-between space-y-5">
+                    <div class="space-y-4">
+                        <div class="font-mono text-xs text-goldleaf-400 tracking-widest">PILLAR II</div>
+                        <div class="w-12 h-12 rounded-xl bg-oxford-900 border border-goldleaf-500/40 text-goldleaf-400 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-ivory-200">Irish Naming Traditions</h3>
+                        <p class="text-sm text-ivory-400 leading-relaxed">
+                            Applying traditional patronymic naming rules, Gaelic-to-English surname translations, agnomens, and Latinised parish entries.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-goldleaf-500/15 font-mono text-[11px] text-goldleaf-400/90">
+                        ONOMASTICS &amp; GAELIC VARIANTS
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="certificate-card charter-corner rounded-2xl p-7 hover:border-goldleaf-400/70 transition-all flex flex-col justify-between space-y-5">
+                    <div class="space-y-4">
+                        <div class="font-mono text-xs text-goldleaf-400 tracking-widest">PILLAR III</div>
+                        <div class="w-12 h-12 rounded-xl bg-oxford-900 border border-goldleaf-500/40 text-goldleaf-400 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-ivory-200">Townland &amp; Parish Geography</h3>
+                        <p class="text-sm text-ivory-400 leading-relaxed">
+                            Navigating Ireland’s 60,000+ townlands while reconciling overlapping Civil Parishes, Catholic Parishes, Baronies, and Poor Law Unions.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-goldleaf-500/15 font-mono text-[11px] text-goldleaf-400/90">
+                        ADMINISTRATIVE JURISDICTION MAPPING
+                    </div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="certificate-card charter-corner rounded-2xl p-7 hover:border-goldleaf-400/70 transition-all flex flex-col justify-between space-y-5">
+                    <div class="space-y-4">
+                        <div class="font-mono text-xs text-goldleaf-400 tracking-widest">PILLAR IV</div>
+                        <div class="w-12 h-12 rounded-xl bg-oxford-900 border border-goldleaf-500/40 text-goldleaf-400 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-ivory-200">Nuances of Local Irish History</h3>
+                        <p class="text-sm text-ivory-400 leading-relaxed">
+                            Contextualising landlord estate transfers, Penal-era property strategies, Famine-era migrations, and regional rural customs.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-goldleaf-500/15 font-mono text-[11px] text-goldleaf-400/90">
+                        HISTORICAL &amp; SOCIAL CONTEXT
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         5. FOLIO III — INTERACTIVE RESEARCH SERVICES EXPLORER
+    ====================================================================== -->
+    <section id="services" class="py-20 lg:py-28 bg-oxford-850 border-b border-goldleaf-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Roman Numeral Folio Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="font-mono text-xs font-semibold tracking-[0.22em] text-goldleaf-500 uppercase">
+                    FOLIO III — COMMISSIONED RESEARCH SERVICES
+                </div>
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl lg:text-[2.85rem] text-ivory-200 tracking-tight">
+                    Bespoke Genealogical Commissions
+                </h2>
+                <p class="text-base sm:text-lg text-ivory-400">
+                    Select any commission below to inspect the archival repositories consulted, ideal client profile, and formal deliverables.
+                </p>
+            </div>
+
+            <!-- Interactive 6-Tab Explorer -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left 6 Service Tabs -->
+                <div id="serviceTabsContainer" class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2.5">
+                    <!-- Rendered via JS -->
+                </div>
+
+                <!-- Right Certificate-Framed Detail Dossier -->
+                <div class="lg:col-span-7 sticky top-24">
+                    <div id="serviceDetailCard" class="certificate-card charter-corner rounded-3xl p-8 sm:p-10 transition-all">
+                        <!-- Rendered via JS -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         6. FOLIO IV — PROVEN BREAKTHROUGHS (CASE STUDIES) & FIVERR CHARTER
+    ====================================================================== -->
+    <section id="case-studies" class="py-20 lg:py-28 bg-oxford-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Case Studies Header -->
+            <div class="mb-14">
+                <div class="font-mono text-xs font-semibold tracking-[0.22em] text-goldleaf-500 uppercase mb-2">
+                    FOLIO IV — PROVEN BREAKTHROUGHS
+                </div>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                    <h2 class="font-serif font-bold text-3xl sm:text-4xl lg:text-[2.75rem] text-ivory-200 tracking-tight">
+                        Selected Archival Case Studies
+                    </h2>
+                    <p class="text-sm text-ivory-400 max-w-md">
+                        How lateral methodology and Dublin repository manuscripts resolve stubborn multi-generational brick walls.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3 Certificate-Framed Case Study Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-7 mb-24">
+                
+                <!-- Case Study 1: 1922 Fire & Registry of Deeds Memorials -->
+                <div class="certificate-card charter-corner rounded-2xl p-7 sm:p-8 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-goldleaf-500/20 pb-3">
+                            <span class="font-mono text-[11px] font-semibold text-goldleaf-400 uppercase tracking-wider">
+                                CASE I • LEINSTER (1742)
+                            </span>
+                            <span class="font-mono text-[11px] text-ivory-500">REGISTRY OF DEEDS</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-ivory-200 leading-snug">
+                            Overcoming the 1922 Public Record Office Fire via Deeds Memorials
+                        </h3>
+                        <p class="text-sm text-ivory-400 leading-relaxed">
+                            With local 18th-century wills and census returns lost in the 1922 Four Courts fire, an unindexed memorial of a three-life lease in Dublin’s Registry of Deeds explicitly recited three generations of fathers, sons, and married daughters—restoring a broken 1700s pedigree.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-goldleaf-500/20 font-mono text-xs text-goldleaf-400">
+                        ✓ THREE GENERATIONS VERIFIED IN ONE DEED
+                    </div>
+                </div>
+
+                <!-- Case Study 2: Mayo/Galway Naming Patterns & Griffith's Valuation -->
+                <div class="certificate-card charter-corner rounded-2xl p-7 sm:p-8 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-goldleaf-500/20 pb-3">
+                            <span class="font-mono text-[11px] font-semibold text-goldleaf-400 uppercase tracking-wider">
+                                CASE II • MAYO &amp; GALWAY
+                            </span>
+                            <span class="font-mono text-[11px] text-ivory-500">GRIFFITH’S VALUATION</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-ivory-200 leading-snug">
+                            Untangling Common Surnames via Naming Patterns &amp; Land Rolls
+                        </h3>
+                        <p class="text-sm text-ivory-400 leading-relaxed">
+                            In a Connacht parish where twelve distinct households shared the same surname, applying traditional Irish patronymic naming patterns alongside Griffith’s Valuation holding clusters and baptismal sponsors isolated the exact ancestral cabin and sub-tenancy.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-goldleaf-500/20 font-mono text-xs text-goldleaf-400">
+                        ✓ EXACT TOWNLAND HOLDING ISOLATED
+                    </div>
+                </div>
+
+                <!-- Case Study 3: Munster Lineage to 1660s Hearth Money Rolls -->
+                <div class="certificate-card charter-corner rounded-2xl p-7 sm:p-8 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-goldleaf-500/20 pb-3">
+                            <span class="font-mono text-[11px] font-semibold text-goldleaf-400 uppercase tracking-wider">
+                                CASE III • MUNSTER (c. 1665)
+                            </span>
+                            <span class="font-mono text-[11px] text-ivory-500">HEARTH MONEY ROLLS</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-ivory-200 leading-snug">
+                            Tracing a Munster Family Back to 1660s Hearth Money Rolls
+                        </h3>
+                        <p class="text-sm text-ivory-400 leading-relaxed">
+                            By working backward sequentially through 19th-century estate rentals, 18th-century Chancery equity bills, and 1660s Hearth Money Rolls, a Munster lineage was anchored to its mid-17th-century barony and ancestral parish origin.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-goldleaf-500/20 font-mono text-xs text-goldleaf-400">
+                        ✓ MID-17TH CENTURY ORIGIN DOCUMENTED
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Dedicated Fiverr Consultation Charter Section (Single Streamlined Callout Card) -->
+            <div id="consultation-charter" class="scroll-mt-24">
+                <div class="certificate-card charter-corner rounded-3xl p-8 sm:p-12 lg:p-14 max-w-5xl mx-auto">
+                    
+                    <div class="text-center max-w-2xl mx-auto space-y-4 mb-10">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-goldleaf-500/12 border border-goldleaf-500/35 font-mono text-[11px] font-semibold text-goldleaf-400 uppercase tracking-widest">
+                            OFFICIAL CONSULTATION CHARTER • FIVERR.COM/SEANOBRIAIN
+                        </div>
+                        <h2 class="font-serif font-bold text-3xl sm:text-4xl lg:text-[2.75rem] text-ivory-200 tracking-tight">
+                            Commission Your Irish Lineage Research
+                        </h2>
+                        <p class="text-sm sm:text-base text-ivory-400 leading-relaxed">
+                            All genealogical consultations and bespoke research commissions are booked exclusively through my Fiverr storefront for transparent milestone protection and direct communication.
+                        </p>
+                    </div>
+
+                    <!-- 3 Clear Steps -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                        <div class="p-6 rounded-2xl bg-oxford-900/85 border border-goldleaf-500/25 space-y-2.5">
+                            <div class="font-mono text-xs font-bold text-goldleaf-400 tracking-widest">STEP I</div>
+                            <h3 class="font-serif font-bold text-xl text-ivory-200">Select Your Research Scope on Fiverr</h3>
+                            <p class="text-xs sm:text-sm text-ivory-400 leading-relaxed">
+                                Choose a research tier or send a direct message on Fiverr to discuss your brick wall before ordering.
+                            </p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-oxford-900/85 border border-goldleaf-500/25 space-y-2.5">
+                            <div class="font-mono text-xs font-bold text-goldleaf-400 tracking-widest">STEP II</div>
+                            <h3 class="font-serif font-bold text-xl text-ivory-200">Share Known Ancestral Details</h3>
+                            <p class="text-xs sm:text-sm text-ivory-400 leading-relaxed">
+                                Provide known names, approximate dates, counties, or family traditions—even partial clues are valuable.
+                            </p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-oxford-900/85 border border-goldleaf-500/25 space-y-2.5">
+                            <div class="font-mono text-xs font-bold text-goldleaf-400 tracking-widest">STEP III</div>
+                            <h3 class="font-serif font-bold text-xl text-ivory-200">Receive a Cited Genealogical Report</h3>
+                            <p class="text-xs sm:text-sm text-ivory-400 leading-relaxed">
+                                Receive a thorough, source-cited narrative report, record transcriptions, and clear next-step guidance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Primary Burnished Gold Fiverr Booking CTA -->
+                    <div class="text-center space-y-3">
+                        <a href="https://www.fiverr.com/seanobriain" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider gold-cta hover:-translate-y-0.5 transition-all">
+                            <span>Book Consultation on Fiverr</span>
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                        <div class="font-mono text-[11px] text-ivory-500">
+                            Direct Link: https://www.fiverr.com/seanobriain
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         7. FOOTER
+    ====================================================================== -->
+    <footer class="bg-oxford-950 border-t border-goldleaf-500/25 py-12 text-ivory-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <!-- Brand & Copyright (Exact Original Celtic Triskelion & Archival Crest) -->
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-library-800 border border-goldleaf-500/45 flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2.5L19.5 5.5V11.8C19.5 16.4 16.3 20.1 12 21.5C7.7 20.1 4.5 16.4 4.5 11.8V5.5L12 2.5Z" stroke="#F4F1EA" stroke-width="1.6" fill="rgba(212, 175, 55, 0.16)"/>
+                            <circle cx="12" cy="11.8" r="1.4" fill="#D4AF37"/>
+                            <path d="M12 11.8C12 9.6 13.7 8 15.2 9.1C16.5 10.1 15.7 12.1 14 11.8" stroke="#D4AF37" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M12 11.8C10.1 12.9 9.5 15.1 11.2 15.9C12.7 16.6 14.1 14.9 13 13.5" stroke="#D4AF37" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M12 11.8C10.1 10.7 8.4 11.8 8.7 13.6C9 15.2 11.1 15.4 11.6 13.7" stroke="#D4AF37" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-ivory-200 text-lg">Seán Labhrás Ua Briain</span>
+                        <span class="block sm:inline text-xs text-ivory-400 sm:ml-2">
+                            &copy; 2026 Irish Genealogy &amp; Lateral Family History Research.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Quick Links & Direct Fiverr Profile Link -->
+                <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-medium">
+                    <a href="#approach" class="hover:text-goldleaf-400 transition-colors">Approach</a>
+                    <a href="#methodology" class="hover:text-goldleaf-400 transition-colors">Methodology</a>
+                    <a href="#services" class="hover:text-goldleaf-400 transition-colors">Services</a>
+                    <a href="#case-studies" class="hover:text-goldleaf-400 transition-colors">Case Studies</a>
+                    <a href="https://www.fiverr.com/seanobriain" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-goldleaf-500/12 border border-goldleaf-500/40 text-goldleaf-400 hover:bg-goldleaf-500 hover:text-oxford-900 font-semibold transition-all">
+                        <span>Book on Fiverr</span>
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================================
+         JAVASCRIPT: ARCHIVAL REPOSITORY CHARTER & SERVICE DOSSIER EXPLORER
+    ====================================================================== -->
+    <script>
+        let activeCharterIndex = 0;
+        let activeServiceIndex = 0;
+
+        // 4 Historical Tiers for the Hero Archival Repository & Lineage Charter
+        const charterTiers = [
+            {
+                folioTag: "TIER I / IV",
+                tabLabel: "1864–1901",
+                eraHeading: "Civil & Census Era (1864–1901)",
+                repositories: "General Register Office (GRO) • National Archives of Ireland (NAI)",
+                strategy: "Cross-referencing 1901/1911 household returns with post-1864 civil birth and marriage certificates to anchor exact townland residences and paternal names.",
+                milestone: "Lineage Milestone: Verified 19th-century family nucleus, witnesses, and exact ancestral townland."
+            },
+            {
+                folioTag: "TIER II / IV",
+                tabLabel: "1825–1855",
+                eraHeading: "Land & Tithe Era (1825–1855)",
+                repositories: "Griffith’s Valuation • Tithe Applotment Books • NLI Parish Microfilms",
+                strategy: "Bridging the destroyed 1821–1851 census gap by correlating land valuations, Catholic parish baptismal sponsors, and traditional patronymic naming patterns.",
+                milestone: "Lineage Milestone: Pre-Famine landholding and early-1800s parental generation established."
+            },
+            {
+                folioTag: "TIER III / IV",
+                tabLabel: "1710–1790",
+                eraHeading: "Registry of Deeds & Penal Era (1710–1790)",
+                repositories: "Registry of Deeds (Henrietta St., Dublin) • Estate Rental Manuscripts",
+                strategy: "Mining unindexed three-life lease memorials, marriage settlements, and landlord rent rolls that explicitly recite three generations of fathers and sons.",
+                milestone: "Lineage Milestone: 18th-century multi-generational pedigree documented prior to surviving parish books."
+            },
+            {
+                folioTag: "TIER IV / IV",
+                tabLabel: "c. 1660s",
+                eraHeading: "Restoration & Hearth Money Rolls (c. 1660s)",
+                repositories: "1659 Poll Tax • Hearth Money Rolls • Books of Survey & Distribution",
+                strategy: "Correlating barony-level tax rolls, Cromwellian land survey books, and Chancery equity bills to anchor ancestral origins in the mid-17th century.",
+                milestone: "Lineage Milestone: Reliable, source-cited family lineage traced back to the mid-1600s."
+            }
+        ];
+
+        // 6 Specialized Research Commissions for FOLIO III
+        const researchCommissions = [
+            {
+                id: "brick-wall",
+                icon: `<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>`,
+                tabTitle: "Brick-Wall Breakthroughs",
+                folioRef: "COMMISSION 01 • LATERAL INVESTIGATION",
+                title: "Brick-Wall Breakthroughs",
+                description: "Designed for family historians whose search has stalled at a missing birth, an unrecorded maiden name, or a destroyed 19th-century census. I apply collateral kinship mapping, baptismal sponsor networks, and unindexed local manuscripts to break through.",
+                repositories: [
+                    "General Register Office (GRO) & National Archives of Ireland (NAI)",
+                    "Petty Sessions Court books, Encumbered Estates & landlord rentals",
+                    "National Library of Ireland (NLI) Catholic parish microfilms"
+                ],
+                idealClient: "Researchers stuck on an elusive 19th- or early-18th-century ancestor despite exhaustive online database searches.",
+                deliverables: "Cited Breakthrough Report, Evidence Correlation Matrix & Next-Step Research Plan"
+            },
+            {
+                id: "pedigree-trace",
+                icon: `<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>`,
+                tabTitle: "Multi-Generation Pedigree Trace",
+                folioRef: "COMMISSION 02 • COMPREHENSIVE LINEAGE",
+                title: "Multi-Generation Pedigree Trace",
+                description: "A rigorous, primary-source reconstruction of your Irish ancestral line(s) from the 20th century as far back as surviving archives permit. Every generational link is verified against original manuscripts rather than unsourced public trees.",
+                repositories: [
+                    "1901 & 1911 Census returns & Old Age Pension claims (1841/1851 proxies)",
+                    "Civil Birth, Marriage & Death registers (1845/1864–1922)",
+                    "Griffith’s Valuation, Tithe Applotment Books & Parish Registers"
+                ],
+                idealClient: "Individuals seeking an authoritative, source-cited family history from a known Irish ancestor backward.",
+                deliverables: "Illustrated Narrative Lineage Charter, GEDCOM File & Full Source Citations"
+            },
+            {
+                id: "deep-lineage",
+                icon: `<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>`,
+                tabTitle: "17th & 18th Century Deep Lineage",
+                folioRef: "COMMISSION 03 • EARLY MODERN ARCHIVES",
+                title: "17th & 18th Century Deep Lineage",
+                description: "Utilising the same lateral archival methods that traced my own lineage to the mid-17th century, this deep-dive explores pre-1800 leases, marriage settlements, Hearth Money Rolls, and equity court pleadings.",
+                repositories: [
+                    "Registry of Deeds (Dublin) memorials & three-life lease renewals",
+                    "1659 Poll Tax returns, Hearth Money Rolls & Books of Survey",
+                    "Prerogative & Diocesan will abstracts, Chancery & Exchequer bills"
+                ],
+                idealClient: "Advanced researchers who have already reached the late 1700s and wish to extend their pedigree into the 17th century.",
+                deliverables: "Early Modern Lineage Dossier, Paleographic Transcriptions & Lease Abstracts"
+            },
+            {
+                id: "townland-dossier",
+                icon: `<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>`,
+                tabTitle: "Townland & Ancestral Homeland Dossier",
+                folioRef: "COMMISSION 04 • TERRITORIAL & LAND HISTORY",
+                title: "Townland & Ancestral Homeland Dossier",
+                description: "Pinpoints the exact townland, field boundaries, and stone homestead your family occupied by tracking tenancies across Valuation Revision Books and overlaying holdings onto 1830s–1840s six-inch Ordnance Survey maps.",
+                repositories: [
+                    "Griffith’s Valuation (1847–1864) & Cancelled Land Books (1860s–1970s)",
+                    "First Edition 6-inch Ordnance Survey historical townland maps",
+                    "Landed Estate rentals & local parish historical records"
+                ],
+                idealClient: "Diaspora visitors planning a trip to Ireland or families wishing to locate their exact ancestral homestead.",
+                deliverables: "Annotated Historical Townland Maps, Tenancy Timeline & Local Parish Profile"
+            },
+            {
+                id: "naming-analysis",
+                icon: `<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" /></svg>`,
+                tabTitle: "Irish Naming & Surname Analysis",
+                folioRef: "COMMISSION 05 • ONOMASTICS & TRANSLATION",
+                title: "Irish Naming & Surname Analysis",
+                description: "Unravels confusing surname mutations—including Gaelic-to-English translations, phonetic anglicisations, traditional patronymic naming patterns, and Latinised parish register entries—to prevent mistaken identity across records.",
+                repositories: [
+                    "Gaelic manuscript surname dictionaries & historical barony distributions",
+                    "Ecclesiastical Latin Catholic parish registers & dispensation entries",
+                    "Regional civil index & Tithe Applotment phonetic variant cross-checks"
+                ],
+                idealClient: "Researchers encountering conflicting surname spellings or struggling to distinguish same-name households in one parish.",
+                deliverables: "Surname & Naming Pattern Report, Variant Checklist & Translated Entries"
+            },
+            {
+                id: "diaspora-origin",
+                icon: `<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+                tabTitle: "Emigration & Diaspora Origin Link",
+                folioRef: "COMMISSION 06 • TRANSATLANTIC BRIDGE",
+                title: "Emigration & Diaspora Origin Link",
+                description: "Connects overseas records in North America, Britain, Australia, or New Zealand back to an exact Irish parish and townland by clustering immigrant neighbours, chain-migration sponsors, and rare surname pairings.",
+                repositories: [
+                    "Famine-era passenger manifests, Emigrant Savings Bank & naturalisation files",
+                    "Irish surname distribution mapping (Griffith’s Valuation & Tithe Books)",
+                    "Local Irish parish baptismal & marriage registers matching immigrant clusters"
+                ],
+                idealClient: "Diaspora descendants whose overseas records state only 'Born in Ireland' without a county or parish.",
+                deliverables: "Origin Identification Report, Townland Probability Analysis & Irish Record Matches"
+            }
+        ];
+
+        // Render Hero Archival Repository & Lineage Charter
+        function renderCharterPreview() {
+            const tabsEl = document.getElementById('charterEraTabs');
+            const contentEl = document.getElementById('charterPreviewContent');
+            const folioTagEl = document.getElementById('charterFolioTag');
+
+            const current = charterTiers[activeCharterIndex];
+            folioTagEl.textContent = current.folioTag;
+
+            tabsEl.innerHTML = charterTiers.map((tier, idx) => {
+                const isActive = idx === activeCharterIndex;
+                return `
+                    <button onclick="selectCharterTier(${idx})" class="py-2 px-2 rounded-lg font-mono text-xs font-semibold transition-all cursor-pointer ${
+                        isActive
+                        ? 'bg-goldleaf-500 text-oxford-900 shadow-sm'
+                        : 'text-ivory-400 hover:text-ivory-200'
+                    }">
+                        ${tier.tabLabel}
+                    </button>
+                `;
+            }).join('');
+
+            contentEl.innerHTML = `
+                <div class="rounded-xl bg-oxford-900/85 border border-goldleaf-500/25 p-5 sm:p-6 space-y-4">
+                    <div class="border-b border-goldleaf-500/20 pb-3">
+                        <div class="font-mono text-[11px] uppercase tracking-widest text-goldleaf-400 mb-1">
+                            ARCHIVAL PERIOD &amp; SCOPE
+                        </div>
+                        <h3 class="font-serif font-bold text-xl sm:text-2xl text-ivory-200">
+                            ${current.eraHeading}
+                        </h3>
+                    </div>
+
+                    <div class="space-y-1">
+                        <div class="font-mono text-[10px] uppercase tracking-wider text-ivory-500">
+                            PRIMARY REPOSITORIES &amp; COLLECTIONS
+                        </div>
+                        <div class="text-xs sm:text-sm font-semibold text-goldleaf-300">
+                            ${current.repositories}
+                        </div>
+                    </div>
+
+                    <div class="space-y-1">
+                        <div class="font-mono text-[10px] uppercase tracking-wider text-ivory-500">
+                            LATERAL RESEARCH STRATEGY
+                        </div>
+                        <p class="text-sm text-ivory-400 leading-relaxed">
+                            ${current.strategy}
+                        </p>
+                    </div>
+
+                    <div class="p-3.5 rounded-lg bg-goldleaf-500/10 border border-goldleaf-500/30 text-xs text-goldleaf-300 font-medium leading-relaxed">
+                        ${current.milestone}
+                    </div>
+                </div>
+            `;
+        }
+
+        function selectCharterTier(index) {
+            activeCharterIndex = index;
+            renderCharterPreview();
+        }
+
+        function nextCharterTier() {
+            activeCharterIndex = (activeCharterIndex + 1) % charterTiers.length;
+            renderCharterPreview();
+        }
+
+        // Render Interactive Research Services Explorer (FOLIO III)
+        function renderServiceExplorer() {
+            const tabsContainer = document.getElementById('serviceTabsContainer');
+            const detailCard = document.getElementById('serviceDetailCard');
+
+            tabsContainer.innerHTML = researchCommissions.map((srv, idx) => {
+                const isActive = idx === activeServiceIndex;
+                return `
+                    <button onclick="selectService(${idx})" class="w-full text-left px-4 py-3.5 rounded-2xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
+                        isActive 
+                        ? 'bg-library-700 border-goldleaf-500/70 text-ivory-200 shadow-lg' 
+                        : 'bg-library-800/60 border-goldleaf-500/20 text-ivory-400 hover:text-ivory-200 hover:bg-library-800'
+                    }">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
+                                isActive ? 'bg-goldleaf-500 text-oxford-900' : 'bg-oxford-900 text-goldleaf-400 border border-goldleaf-500/30'
+                            }">
+                                ${srv.icon}
+                            </div>
+                            <span class="font-serif font-bold text-base sm:text-lg truncate">${srv.tabTitle}</span>
+                        </div>
+                        <svg class="w-4 h-4 shrink-0 transition-transform ${isActive ? 'text-goldleaf-400 translate-x-0.5' : 'text-ivory-500'}" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                `;
+            }).join('');
+
+            const data = researchCommissions[activeServiceIndex];
+
+            detailCard.innerHTML = `
+                <div class="flex flex-wrap items-center justify-between gap-3 border-b border-goldleaf-500/20 pb-4 mb-5">
+                    <span class="font-mono text-xs font-semibold text-goldleaf-400 tracking-wider uppercase">
+                        ${data.folioRef}
+                    </span>
+                    <span class="font-mono text-[11px] text-ivory-500">
+                        FIVERR COMMISSION DOSSIER
+                    </span>
+                </div>
+
+                <h3 class="font-serif font-bold text-2xl sm:text-3xl text-ivory-200 tracking-tight mb-4">
+                    ${data.title}
+                </h3>
+
+                <p class="text-sm sm:text-base text-ivory-400 leading-relaxed mb-6">
+                    ${data.description}
+                </p>
+
+                <!-- Primary Repositories Consulted -->
+                <div class="space-y-3 border-t border-goldleaf-500/20 pt-5 mb-6">
+                    <div class="font-mono text-xs font-semibold uppercase tracking-wider text-goldleaf-400">
+                        Primary Repositories Consulted:
+                    </div>
+                    ${data.repositories.map(item => `
+                        <div class="flex items-start gap-3">
+                            <span class="text-goldleaf-400 font-bold text-sm mt-0.5">✦</span>
+                            <span class="text-sm text-ivory-200">${item}</span>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- Ideal Client & Formal Deliverables Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 rounded-2xl bg-oxford-900/80 border border-goldleaf-500/20 mb-7">
+                    <div>
+                        <div class="font-mono text-[10px] uppercase tracking-wider text-goldleaf-400 mb-1">
+                            Ideal Client Profile
+                        </div>
+                        <p class="text-xs text-ivory-400 leading-relaxed">
+                            ${data.idealClient}
+                        </p>
+                    </div>
+                    <div class="sm:border-l sm:border-goldleaf-500/20 sm:pl-4">
+                        <div class="font-mono text-[10px] uppercase tracking-wider text-goldleaf-400 mb-1">
+                            Formal Deliverables
+                        </div>
+                        <p class="text-xs text-ivory-200 font-medium leading-relaxed">
+                            ${data.deliverables}
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="https://www.fiverr.com/seanobriain" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider gold-cta hover:-translate-y-0.5 transition-all">
+                        <span>Book This Service on Fiverr</span>
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                </div>
+            `;
+        }
+
+        function selectService(index) {
+            activeServiceIndex = index;
+            renderServiceExplorer();
+        }
+
+        // Mobile Navigation Drawer Controls
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const openIcon = document.getElementById('menuIconOpen');
+            const closeIcon = document.getElementById('menuIconClose');
+            const isHidden = menu.classList.contains('hidden');
+
+            if (isHidden) {
+                menu.classList.remove('hidden');
+                openIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.add('hidden');
+            document.getElementById('menuIconOpen').classList.remove('hidden');
+            document.getElementById('menuIconClose').classList.add('hidden');
+        }
+
+        // Initialize Interactive Components on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCharterPreview();
+            renderServiceExplorer();
+        });
+    </script>
+</body>
+</html>
